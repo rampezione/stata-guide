@@ -92,7 +92,7 @@
 {phang2}{* example_end}{...}{p_end}
 {phang2}{txt}{...}{p_end}
 {phang2}{hline 48}{p_end}
-{phang2}{it:({stata . do "https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__Input_the_data.do":click to run})}{p_end}
+{phang2}{it:({stata ". do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__Input_the_data.do":click to run})}{p_end}
 
 {phang2}{stata . describe}{p_end}
 {phang2}{stata . codebook, compact}{p_end}
