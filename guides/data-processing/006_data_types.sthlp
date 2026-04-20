@@ -218,4 +218,4 @@
  
 {hline}
 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/005_Explore_data.sthlp": back (Explore data)} / {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/007_Summarize.sthlp": next (Summarize data)}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/005_explore_data.sthlp": back (Explore data)} / {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/007_summarize.sthlp": next (Summarize data)}
