@@ -74,7 +74,7 @@
 {pstd}Input allows you to type data directly into the dataset in memory. However, for most users,{p_end}
 {pstd}edit is a better way to add observations to the dataset because it automatically adjusts the{p_end}
 {pstd}storage type of variables, if required, to accommodate new values (see {stata help edit:help edit},{p_end}
-{pstd}next chapter {help "https://homepages.tuni.fi/jani.raitanen/Stata/Guide/005_Explore_data.sthlp":Explore data}).{p_end}
+{pstd}next chapter {help "https://github.com/rampezione/stata-guide/raw/main/guides/005_explore_data.sthlp":Explore data}).{p_end}
  
 {phang2}{hline 3} {it:example input the data content} {hline 13}{p_end}
 {phang2}{* example_start - input the data}{...}{p_end}
@@ -92,7 +92,7 @@
 {phang2}{* example_end}{...}{p_end}
 {phang2}{txt}{...}{p_end}
 {phang2}{hline 48}{p_end}
-{phang2}{it:({stata "do https://homepages.tuni.fi/jani.raitanen/Stata/Guide/Example__Input_the_data.do":click to run})}{p_end}
+{phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__Input_the_data.do":click to run})}{p_end}
 
 {phang2}{stata . describe}{p_end}
 {phang2}{stata . codebook, compact}{p_end}
