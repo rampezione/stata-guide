@@ -2,7 +2,7 @@
 {* *! Stata version 19.5 --- 2026-04-20}{...}
 
 {hilite: Setup}{...}
-{right:{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing.sthlp":Data processing}}
+{right:{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/data-processing.sthlp":Data processing}}
 
 {hline}
 
@@ -98,5 +98,5 @@
 
 {hline}
 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/002_basic_data_operations.sthlp": back (Basic data operations)} / {view "https://github.com/rampezione/stata-guide/raw/main/guides/004_import_data.sthlp":next (Open / save the data)}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/002_basic_data_operations.sthlp": back (Basic data operations)} / {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/004_import_data.sthlp":next (Open / save the data)}
 
