@@ -72,11 +72,10 @@
 {phang2}{stata . label values price_cat_recode p4}{p_end}
 {phang2}{stata . tab price_cat price_cat_recode}{p_end}
 
-{pstd}{error: {bf:Note on numeric precision:}} When creating categories based on cut-points,{p_end}
-{pstd}be aware of floating-point precision. Values that appear to equal a cut-point may be{p_end}
-{pstd}stored slightly below or above the threshold in memory, which can affect classification.{p_end}
-{pstd}For details, see the discussion on numeric storage types and rounding:{p_end}
-{pstd}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/006_data_types.sthlp": ===> float}{p_end}
+{pstd}{error: {bf:Note on numeric precision:}}{p_end}
+{pstd}When creating categories based on cut-points, be aware of floating-point precision. Values{p_end}
+{pstd}that appear to equal a cut-point may be stored slightly below or above the threshold in memory,{p_end}
+{pstd}which can affect classification. For details, see the discussion on numeric storage types and rounding:{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/006_data_types.sthlp": float}{p_end}
 
 
 {dlgtab:more information}
