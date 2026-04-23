@@ -1,0 +1,19 @@
+* Custom graph scheme
+* Based on Stata's official s2color scheme with minor visual modifications
+
+*! version 1.0.0   2026-04-23
+
+#include s2color
+
+color background white
+color major_grid "200 200 200"
+
+color p1 navy
+color p2 "128 195 66"
+
+anglestyle vertical_tick horizontal
+
+clockdir legend_position 4
+numstyle legend_cols 1
+linestyle legend none
+margin legend "5 0 0 0"
