@@ -37,22 +37,22 @@
 {title:Main topics}
 
 {pstd}{space 2}{cmd:1. Data Processing}{p_end}
-{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/data-processing.sthlp":Data Processing (shortcuts, basic operations, data import/export, exploration)}{p_end}
+{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/data-processing.sthlp":Basic operations, data import and export, data exploration and summarization, changing data types, creating new variables, ...}{p_end}
 
 {pstd}{space 2}{cmd:2. Data Transformation}{p_end}
-{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-transformation/data-transformation.sthlp":Data Transformation (reshaping, merging, appending data)}{p_end}
+{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-transformation/data-transformation.sthlp":Subsetting data, replacing and modifying data, reshaping datasets, merging and appending data, ...}{p_end}
 
 {pstd}{space 2}{cmd:3. Data Analysis}{p_end}
-{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-analysis/data-analysis.sthlp":Data Analysis (descriptive statistics, hypothesis testing, modeling)}{p_end}
+{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-analysis/data-analysis.sthlp":Descriptive statistics, hypothesis testing, model fitting, diagnostics, postestimation, ...}{p_end}
 
 {pstd}{space 2}{cmd:4. Data Visualization}{p_end}
-{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":Data Visualization (graphs, charts, plot customization)}{p_end}
+{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":Applying themes, plotting graphs, plot customization, saving plots, ...}{p_end}
 
 {pstd}{space 2}{cmd:5. Data Programming}{p_end}
-{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-programming/data-programming.sthlp":Data Programming (macros, loops, functions, automation)}{p_end}
+{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-programming/data-programming.sthlp":Scalars, matrices, macros, stored r-class and e-class objects, loops, automation, ...}{p_end}
 
 {pstd}{space 2}{cmd:6. Miscellaneous}{p_end}
-{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/miscellaneous/miscellaneous.sthlp":Miscellaneous (tips, tricks, troubleshooting)}{p_end}
+{pstd}{space 5}{view "https://github.com/rampezione/stata-guide/raw/main/guides/miscellaneous/miscellaneous.sthlp":Tips, tricks, troubleshooting, ...}{p_end}
 
 
 {hline}
