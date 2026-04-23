@@ -8,8 +8,8 @@
 color background white
 color major_grid "200 200 200"
 
-color p1 navy
-color p2 "128 195 66"
+color p1 "128 195 66"
+color p2 navy
 
 anglestyle vertical_tick horizontal
 
