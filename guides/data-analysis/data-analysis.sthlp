@@ -22,10 +22,10 @@
 {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-analysis/003_association.sthlp":Correlation and association analysis (correlate, pwcorr, tabulation)}{p_end}
 
 {pstd}{space 2}4. 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-analysis/005_declare_data.sthlp":Declare data (tsset, stset, xtset, svyset)}{p_end}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-analysis/004_declare_data.sthlp":Declare data (tsset, stset, xtset, svyset)}{p_end}
 
 {pstd}{space 2}5. 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-analysis/004_models.sthlp":Fit models (regress, logit, poisson)}{p_end}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-analysis/005_models.sthlp":Fit models (regress, logit, poisson)}{p_end}
 
 {pstd}{space 2}6. 
 {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-analysis/006_diagnostics_and_postestimation.sthlp":Model diagnostics and postestimation}{p_end}
