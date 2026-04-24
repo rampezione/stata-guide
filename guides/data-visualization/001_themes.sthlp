@@ -49,13 +49,13 @@
 {dlgtab:Installing custom schemes}
 
 {pstd}Throughout this guide, all graph examples are tested using the {cmd:white_tableau} scheme,{p_end}
-{pstd}which is part of {cmd:schemepack} package written by Asjaq Naqvi:{browse "https://github.com/asjadnaqvi/stata-schemepack": GitHub / schemepack}.{p_end}
+{pstd}which is part of {cmd:schemepack} package written by Asjad Naqvi:{browse "https://github.com/asjadnaqvi/stata-schemepack": GitHub / schemepack}.{p_end}
 {pstd}The style is minimalistic, modern, and suitable for publications.{p_end}
 
 {pstd}Schemepack can be installed from the Statistical Software Components (SSC) archive or GitHub.{p_end}
 {pstd}GitHub files might contain latest updates that have not been currently pushed to SSC.{p_end}
 {phang2}{stata . ssc install schemepack, replace}{p_end}
-{phang2}{stata ". net install schemepack, from("https://raw.githubusercontent.com/asjadnaqvi/stata-schemepack/main/installation/") replace"}{p_end}
+{phang2}{stata ". net install schemepack, from(https://raw.githubusercontent.com/asjadnaqvi/stata-schemepack/main/installation/) replace"}{p_end}
 
 {pstd}After installation, you can use one of the schemes from this shemeback{p_end}
 {phang2}{stata . graph query, schemes}{p_end}
@@ -65,16 +65,15 @@
 
 {pstd}A wide range of modern, publication‑ready graphics schemes is available from{p_end}
 {pstd}the Stata community. Below you may found a couple of them.{p_end}
-
 {phang2}{stata . ssc install blindschemes, replace}{space 38}{error:// plotplain and plottig by Daniel Bischof}{p_end}
 {phang2}{stata . help blindschemes}{space 54}{error:// {browse "https://www.danbischof.com/assets/pdf/Bischof2017Stata.pdf":New graphic schemes for Stata - plotplain and plottig} (pdf)}{p_end}
 {phang2}{stata . help plotplain}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(plotplain)}{p_end}
-{phang2}{stata . twoway scatter price mpg, scheme(plotplainblind){p_end}
+{phang2}{stata . twoway scatter price mpg, scheme(plotplainblind)}{p_end}
 
-{phang2}{stata . "net install cleanplots, from("https://tdmize.github.io/data") replace"}{space 2}{error:// {browse "https://www.trentonmize.com/software/cleanplots":cleanplots} by Trenton D. Mize}{p_end}
+{phang2}{stata ". net install cleanplots, from(https://tdmize.github.io/data) replace"}{space 2}{error:// {browse "https://www.trentonmize.com/software/cleanplots":cleanplots} by Trenton D. Mize}{p_end}
 {phang2}{stata . help cleanplots}{p_end}
-{phang2}{stata . twoway scatter price mpg, scheme(cleanplots){p_end}
+{phang2}{stata . twoway scatter price mpg, scheme(cleanplots)}{p_end}
 
 
 {dlgtab:Creating your own schemes}
@@ -99,8 +98,7 @@
 {phang2}{stata . grstyle clear}{space 29}{error:// Revert back to original scheme (here s2color)}{p_end}
 
 {pstd}Alternatively, you can base your scheme on one of Stata’s official schemes,{p_end}
-{pstd}or on a scheme derived from an official Stata scheme. (see help scheme files){p_end}
-{phang2}{stata . help scheme files}{p_end}
+{pstd}or on a scheme derived from an official Stata scheme. (see {stata help scheme files}){p_end}
 
 {pstd}Scheme {it:schemename} is stored in file scheme-schemename.scheme. For example, scheme s2color is{p_end}
 {pstd}stored in file scheme-s2color.scheme. You can find where a scheme file is located by typing{p_end}
@@ -115,7 +113,7 @@
 
 {pstd}before any scheme-file entries in your scheme.{p_end}
 
-{phang2}{hline 3} {it:example scheme-mine.scheme} {hline 13}{p_end}
+{phang2}{hline 3} {it:example scheme-mine.scheme} {hline 19}{p_end}
 {phang2}{* example_start - create own scheme}{...}{p_end}
 {phang2}* Description of the new scheme can be added here{p_end}
 
@@ -137,14 +135,17 @@
 {phang2}margin legend{space 12}"5 0 0 0"{p_end}
 {phang2}{* example_end}{...}{p_end}
 {phang2}{txt}{...}{p_end}
-{phang2}{hline 48}{p_end}
+{phang2}{hline 50}{p_end}
 
-{pstd}Install the above scheme (command net install below), set the scheme, and compare{p_end}
-{pstd}the modified scheme with the original one. In the end, reset URL to default.{p_end}
-{phang2}{stata ". net install scheme-mine, from("https://github.com/rampezione/stata-guide/raw/main/guides/schemes/")}{p_end}
+{pstd}You can test the example above by first installing the scheme from GitHub.{p_end}
+{phang2}{stata ". net install scheme-mine, from(https://github.com/rampezione/stata-guide/raw/main/guides/schemes/")}{p_end}
+
+{pstd}Then set the scheme and draw the graph with original and modified scheme.{p_end}
 {phang2}{stata . set scheme mine}{p_end}
 {phang2}{stata . graph bar rep78, over(foreign) scheme(s2color)}{p_end}
 {phang2}{stata . graph bar rep78, over(foreign) scheme(mine)}{p_end}
+
+{pstd}In the end, remember to reset URL to default.{p_end}
 {phang2}{stata . webuse set}{p_end}
 
 
@@ -171,15 +172,15 @@
 {phang2}set scheme gg_hue{p_end}
 
 {phang2}twoway ///{p_end}
-{phang2}{space 4}bar maletotal agegrp, horizontal xvarlab(Male)   || ///{p_end}
-{phang2}{space 4}bar femtotal  agegrp, horizontal xvarlab(Female) || ///{p_end}
-{phang2}{space 4}, ylabel(1(1)17, valuelabel labsize(*.8) angle(0)) ///{p_end}
-{phang2}{space 4}xtitle("Population in millions") ytitle("") ///{p_end}
-{phang2}{space 4}xlabel(-10 "10" -7.5 "7.5" -5 "5" -2.5 "2.5" 2.5 5 7.5 10) ///{p_end}
+{phang2}{space 4}bar maletotal agegrp, horizontal xvarlab(Male)   ||{space 6}///{p_end}
+{phang2}{space 4}bar femtotal  agegrp, horizontal xvarlab(Female) ||{space 6}///{p_end}
+{phang2}{space 4}, ylabel(1(1)17, valuelabel labsize(*.8) angle(0)){space 7}///{p_end}
+{phang2}{space 4}xtitle("Population in millions") ytitle(""){space 15}///{p_end}
+{phang2}{space 4}xlabel(-10 "10" -7.5 "7.5" -5 "5" -2.5 "2.5" 2.5 5 7.5 10){space 2}///{p_end}
 {phang2}{space 4}legend(label(1 Male) label(2 Female) pos(1) ring(0) row(2)) ///{p_end}
-{phang2}{space 4}title("Base scheme (gg_hue)") ///{p_end}
-{phang2}{space 4}subtitle("No additional styling") ///{p_end}
-{phang2}{space 4}note("Source: US Census Bureau, Census 2000", span) ///{p_end}
+{phang2}{space 4}title("Base scheme (gg_hue)"){space 27}///{p_end}
+{phang2}{space 4}subtitle("No additional styling"){space 22}///{p_end}
+{phang2}{space 4}note("Source: US Census Bureau, Census 2000", span){space 9}///{p_end}
 {phang2}{space 4}name(g_base, replace){p_end}
 
 {phang2}* Graph using gg_hue and grstyle refinements{p_end}
@@ -196,15 +197,15 @@
 {phang2}grstyle set symbol O T{p_end}
 
 {phang2}twoway ///{p_end}
-{phang2}{space 4}bar maletotal agegrp, horizontal xvarlab(Male)   || ///{p_end}
-{phang2}{space 4}bar femtotal  agegrp, horizontal xvarlab(Female) || ///{p_end}
-{phang2}{space 4}, ylabel(1(1)17, valuelabel labsize(*.8) angle(0)) ///{p_end}
-{phang2}{space 4}xtitle("Population in millions") ytitle("") ///{p_end}
-{phang2}{space 4}xlabel(-10 "10" -7.5 "7.5" -5 "5" -2.5 "2.5" 2.5 5 7.5 10) ///{p_end}
+{phang2}{space 4}bar maletotal agegrp, horizontal xvarlab(Male)   ||{space 6}///{p_end}
+{phang2}{space 4}bar femtotal  agegrp, horizontal xvarlab(Female) ||{space 6}///{p_end}
+{phang2}{space 4}, ylabel(1(1)17, valuelabel labsize(*.8) angle(0)){space 7}///{p_end}
+{phang2}{space 4}xtitle("Population in millions") ytitle(""){space 15}///{p_end}
+{phang2}{space 4}xlabel(-10 "10" -7.5 "7.5" -5 "5" -2.5 "2.5" 2.5 5 7.5 10){space 2}///{p_end}
 {phang2}{space 4}legend(label(1 Male) label(2 Female) pos(1) ring(0) row(2)) ///{p_end}
-{phang2}{space 4}title("Base scheme (gg_hue)") ///{p_end}
-{phang2}{space 4}subtitle("No additional styling") ///{p_end}
-{phang2}{space 4}note("Source: US Census Bureau, Census 2000", span) ///{p_end}
+{phang2}{space 4}title("Base scheme (gg_hue)"){space 27}///{p_end}
+{phang2}{space 4}subtitle("No additional styling"){space 22}///{p_end}
+{phang2}{space 4}note("Source: US Census Bureau, Census 2000", span){space 9}///{p_end}
 {phang2}{space 4}name(g_base, replace){p_end}
 
 {phang2}* Combine graphs side by side for comparison{p_end}
@@ -217,7 +218,7 @@
 {phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__Combining_scheme_and_styling_tool.do":click to run})}{p_end}
 
 {pstd}This combined approach (base scheme + grstyle) avoids the need to create{p_end}
-{pstd}a fully custom scheme while Still providing fine‑grained control over{p_end}
+{pstd}a fully custom scheme while still providing fine-grained control over{p_end}
 {pstd}the appearance of individual graphs.{p_end}
 
 {hline}
