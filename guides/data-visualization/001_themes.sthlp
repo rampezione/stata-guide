@@ -21,12 +21,12 @@
 {phang2}{stata . graph query, schemes}{p_end}
 
 {pstd}Set the default scheme for the rest of the session{p_end}
-{phang2}{stata . set schemes sj}{error:// The previous official scheme of the {it:Stata Journal} is {cmd:sj}}{p_end}
-{phang2}{stata . set schemes stsj}{error:// The current official scheme of the {it:Stata Journal} is {cmd:stsj}}{p_end}
+{phang2}{stata . set schemes sj}{space 26}{error:// The previous official scheme of the {it:Stata Journal} is {cmd:sj}}{p_end}
+{phang2}{stata . set schemes stsj}{space 24}{error:// The current official scheme of the {it:Stata Journal} is {cmd:stsj}}{p_end}
 
 {pstd}Compare different schemes without closing graph{p_end}
 {phang2}{stata . webuse auto}{p_end}
-{phang2}{stata . twoway scatter price mpg}{error:// Do not close the graph!}{p_end}
+{phang2}{stata . twoway scatter price mpg}{space 16}{error:// Do not close the graph!}{p_end}
 {phang2}{stata . graph display Graph, scheme(economist)}{p_end}
 {phang2}{stata . graph display Graph, scheme(s2mono)}{p_end}
 {phang2}{stata . graph display Graph, scheme(stcolor)}{p_end}
@@ -38,9 +38,9 @@
 {phang2}{stata . twoway scatter price mpg, scheme(stcolor)}{p_end}
 
 {pstd}Marker symbol, color, titles etc. can be changes using options{p_end}
-{phang2}{stata . twoway scatter price mpg, scheme(stcolor) mcolor(navy){error:// Change the marker color}}{p_end}
-{phang2}{stata . twoway scatter price mpg, scheme(stcolor) mcolor(navy) msymbol(square){error:// Change the marker symbol}}{p_end}
-{phang2}{stata . twoway scatter price mpg, scheme(stcolor) xtitle(Mileage)}{error:// Change the title in x-axis}}{p_end}
+{phang2}{stata . twoway scatter price mpg, scheme(stcolor) mcolor(navy)}{space 18}{error:// Change the marker color}{p_end}
+{phang2}{stata . twoway scatter price mpg, scheme(stcolor) mcolor(navy) msymbol(square)}{space 2}{error:// Change the marker symbol}{p_end}
+{phang2}{stata . twoway scatter price mpg, scheme(stcolor) xtitle(Mileage)}{space 15}{error:// Change the title in x-axis}{p_end}
 
 {pstd}Set the scheme as the default scheme in future sessions{p_end}
 {phang2}{stata . set schemes stsj, permanently}{p_end}
@@ -50,7 +50,7 @@
 
 {pstd}Throughout this guide, all graph examples are tested using the {cmd:white_tableau} scheme,{p_end}
 {pstd}which is part of {cmd:schemepack} package written by Asjaq Naqvi:{p_end}
-{pstd}{browse "https://github.com/asjadnaqvi/stata-schemepack":GitHub / schemepack}. The style is 
+{pstd}{browse "https://github.com/asjadnaqvi/stata-schemepack":GitHub / schemepack}. The style is{p_end} 
 {pstd}minimalistic, modern, and suitable for publications, web‑based documentation, and so on.{p_end}
 
 {pstd}Schemepack can be installed from the Statistical Software Components (SSC) archive or GitHub.{p_end} 
@@ -68,8 +68,7 @@
 {pstd}the Stata community. Below you may found a couple of them.{p_end}
 
 {phang2}{stata . ssc install blindschemes, replace}{error:// plotplain and plottig by Daniel Bischof}{p_end}
-{phang2}{stata . help blindschemes}{error:// {browse "https://www.danbischof.com/assets/pdf/Bischof2017Stata.pdf":New graphic schemes for Stata - plotplain and
-plottig} (pdf)}}{p_end}
+{phang2}{stata . help blindschemes}{error:// {browse "https://www.danbischof.com/assets/pdf/Bischof2017Stata.pdf":New graphic schemes for Stata - plotplain and plottig} (pdf)}}{p_end}
 {phang2}{stata . help plotplain}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(plotplain)}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(plotplainblind){p_end}
