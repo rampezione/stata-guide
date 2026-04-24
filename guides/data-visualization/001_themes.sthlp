@@ -21,8 +21,8 @@
 {phang2}{stata . graph query, schemes}{p_end}
 
 {pstd}Set the default scheme for the rest of the session{p_end}
-{phang2}{stata . set scheme sj}{space 27}{error:// The previous official scheme of the {it:Stata Journal} is {cmd:sj}}{p_end}
-{phang2}{stata . set scheme stsj}{space 25}{error:// The current official scheme of the {it:Stata Journal} is {cmd:stsj}}{p_end}
+{phang2}{stata . set scheme sj}{space 27}{error:// The previous official scheme of the {it:Stata Journal} is sj}{p_end}
+{phang2}{stata . set scheme stsj}{space 25}{error:// The current official scheme of the {it:Stata Journal} is stsj}{p_end}
 
 {pstd}Compare different schemes without closing graph{p_end}
 {phang2}{stata . webuse auto, clear}{p_end}
@@ -48,8 +48,8 @@
 
 {dlgtab:Installing custom schemes}
 
-{pstd}Throughout this guide, all graph examples are tested using the {cmd:white_tableau} scheme,{p_end}
-{pstd}which is part of {cmd:schemepack} package written by Asjad Naqvi:{browse "https://github.com/asjadnaqvi/stata-schemepack": GitHub / schemepack}.{p_end}
+{pstd}Throughout this guide, all graph examples are tested using the {it:white_tableau} scheme,{p_end}
+{pstd}which is part of {it:schemepack} package written by Asjad Naqvi:{browse "https://github.com/asjadnaqvi/stata-schemepack": GitHub / schemepack}.{p_end}
 {pstd}The style is minimalistic, modern, and suitable for publications.{p_end}
 
 {pstd}Schemepack can be installed from the Statistical Software Components (SSC) archive or GitHub.{p_end}
@@ -63,8 +63,8 @@
 {phang2}{stata . twoway scatter price mpg, scheme(black_hue)}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(white_tableau)}{space 24}{error:// Asjad's default scheme}{p_end}
 
-{pstd}A wide range of modern, publication-ready graphics schemes is available from{p_end}
-{pstd}the Stata community. Below you may found a couple of them.{p_end}
+{pstd}A wide range of modern, publication-ready graphics schemes is available{p_end}
+{pstd}from the Stata community. Below you may found a couple of them.{p_end}
 {phang2}{stata . ssc install blindschemes, replace}{space 38}{error:// plotplain and plottig by Daniel Bischof}{p_end}
 {phang2}{stata . help blindschemes}{space 54}{error:// {browse "https://www.danbischof.com/assets/pdf/Bischof2017Stata.pdf":New graphic schemes for Stata - plotplain and plottig} (pdf)}{p_end}
 {phang2}{stata . help plotplain}{p_end}
@@ -171,8 +171,8 @@
 {phang2}set scheme gg_hue{p_end}
 
 {phang2}twoway ///{p_end}
-{phang2}{space 4}bar maletotal agegrp, horizontal xvarlab(Male) ||{space 13}///{p_end}
-{phang2}{space 4}bar femtotal  agegrp, horizontal xvarlab(Female) ||{space 11}///{p_end}
+{phang2}{space 4}bar maletotal agegrp, horizontal xvarlab(Male) ||{space 11}///{p_end}
+{phang2}{space 4}bar femtotal  agegrp, horizontal xvarlab(Female) ||{space 10}///{p_end}
 {phang2}{space 4}, ylabel(1(1)17, valuelabel labsize(*.8) angle(0)){space 10}///{p_end}
 {phang2}{space 4}xtitle("Population in millions") ytitle(""){space 17}///{p_end}
 {phang2}{space 4}xlabel(-10 "10" -7.5 "7.5" -5 "5" -2.5 "2.5" 2.5 5 7.5 10){space 2}///{p_end}
@@ -196,14 +196,14 @@
 {phang2}grstyle set symbol O T{p_end}
 
 {phang2}twoway ///{p_end}
-{phang2}{space 4}bar maletotal agegrp, horizontal xvarlab(Male)   ||{space 6}///{p_end}
-{phang2}{space 4}bar femtotal  agegrp, horizontal xvarlab(Female) ||{space 6}///{p_end}
-{phang2}{space 4}, ylabel(1(1)17, valuelabel labsize(*.8) angle(0)){space 7}///{p_end}
-{phang2}{space 4}xtitle("Population in millions") ytitle(""){space 15}///{p_end}
+{phang2}{space 4}bar maletotal agegrp, horizontal xvarlab(Male) ||{space 11}///{p_end}
+{phang2}{space 4}bar femtotal  agegrp, horizontal xvarlab(Female) ||{space 10}///{p_end}
+{phang2}{space 4}, ylabel(1(1)17, valuelabel labsize(*.8) angle(0)){space 10}///{p_end}
+{phang2}{space 4}xtitle("Population in millions") ytitle(""){space 17}///{p_end}
 {phang2}{space 4}xlabel(-10 "10" -7.5 "7.5" -5 "5" -2.5 "2.5" 2.5 5 7.5 10){space 2}///{p_end}
 {phang2}{space 4}legend(label(1 Male) label(2 Female) pos(1) ring(0) row(2)) ///{p_end}
-{phang2}{space 4}title("Base scheme (gg_hue)"){space 27}///{p_end}
-{phang2}{space 4}subtitle("No additional styling"){space 22}///{p_end}
+{phang2}{space 4}title("Base scheme (gg_hue)"){space 31}///{p_end}
+{phang2}{space 4}subtitle("No additional styling"){space 27}///{p_end}
 {phang2}{space 4}note("Source: US Census Bureau, Census 2000", span){space 9}///{p_end}
 {phang2}{space 4}name(g_base, replace){p_end}
 
@@ -222,4 +222,4 @@
 
 {hline}
 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":← Back to Data Visualization} / {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/002_univariate_graphs.sthlp":next (Univariate graphs)}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":Back to Data Visualization} / {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/002_univariate_graphs.sthlp":Next (Univariate graphs)}
