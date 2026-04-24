@@ -57,13 +57,13 @@
 {phang2}{stata . ssc install schemepack, replace}{p_end}
 {phang2}{stata ". net install schemepack, from(https://raw.githubusercontent.com/asjadnaqvi/stata-schemepack/main/installation/) replace"}{p_end}
 
-{pstd}After installation, you can use one of the schemes from this shemeback{p_end}
+{pstd}After installation, you can use one of the schemes from this shemeback.{p_end}
 {phang2}{stata . graph query, schemes}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(gg_ptol)}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(black_hue)}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(white_tableau)}{space 24}{error:// Asjad's default scheme}{p_end}
 
-{pstd}A wide range of modern, publication‑ready graphics schemes is available from{p_end}
+{pstd}A wide range of modern, publication-ready graphics schemes is available from{p_end}
 {pstd}the Stata community. Below you may found a couple of them.{p_end}
 {phang2}{stata . ssc install blindschemes, replace}{space 38}{error:// plotplain and plottig by Daniel Bischof}{p_end}
 {phang2}{stata . help blindschemes}{space 54}{error:// {browse "https://www.danbischof.com/assets/pdf/Bischof2017Stata.pdf":New graphic schemes for Stata - plotplain and plottig} (pdf)}{p_end}
@@ -71,7 +71,7 @@
 {phang2}{stata . twoway scatter price mpg, scheme(plotplain)}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(plotplainblind)}{p_end}
 
-{phang2}{stata ". net install cleanplots, from(https://tdmize.github.io/data) replace"}{space 2}{error:// {browse "https://www.trentonmize.com/software/cleanplots":cleanplots} by Trenton D. Mize}{p_end}
+{phang2}{stata ". net install cleanplots, from(https://tdmize.github.io/data) replace"}{space 4}{error:// {browse "https://www.trentonmize.com/software/cleanplots":cleanplots} by Trenton D. Mize}{p_end}
 {phang2}{stata . help cleanplots}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(cleanplots)}{p_end}
 
@@ -83,7 +83,7 @@
 {pstd}styling programmatically within do-files.{p_end}
 
 {pstd}grstyle by Ben Jann is a Stata module to customize the overall look of graphs{p_end}
-{phang2}{stata . ssc install grstyle, replace}{space 14}{error:// {browse "https://github.com/benjann/grstyle": GitHub / grstyle}}{p_end}
+{phang2}{stata . ssc install grstyle, replace}{space 14}{error:// {browse "https://github.com/benjann/grstyle":GitHub / grstyle}}{p_end}
 {phang2}{stata . ssc install palettes, replace}{space 13}{error:// {browse "https://repec.sowi.unibe.ch/stata/grstyle/index.html":grstyle} - Customizing Stata graphs made easy}{p_end}
 {phang2}{stata . ssc install colrspace, replace}{space 12}{error:// {browse "https://repec.sowi.unibe.ch/stata/grstyle/getting-started.html":Getting started} - How to use grstyle}{p_end}
 {phang2}{stata . help grstyle}{space 30}{error:// {browse "https://repec.sowi.unibe.ch/stata/grstyle/grstyle-set.html":Examples}}{p_end}
@@ -138,7 +138,7 @@
 {phang2}{hline 50}{p_end}
 
 {pstd}You can test the example above by first installing the scheme from GitHub.{p_end}
-{phang2}{stata ". net install scheme-mine, from(https://github.com/rampezione/stata-guide/raw/main/guides/schemes/")}{p_end}
+{phang2}{stata ". net install scheme-mine, from(https://github.com/rampezione/stata-guide/raw/main/guides/schemes/)"}{p_end}
 
 {pstd}Then set the scheme and draw the graph with original and modified scheme.{p_end}
 {phang2}{stata . set scheme mine}{p_end}
@@ -151,14 +151,13 @@
 
 {pstd}Graph schemes and styling tools can also be combined. One common workflow is to{p_end}
 {pstd}start from an existing scheme and then apply additional style adjustments using{p_end}
-{pstd}tools such as {cmd:grstyle}.{p_end}
+{pstd}tools such as {it:grstyle}.{p_end}
 
-{pstd}In the example below, the first graph is based on the base scheme{p_end}
-{pstd}and the second one is refined by modifying selected graphical elements{p_end}
-{pstd}directly in the analysis script. This approach allows you to maintain{p_end}
-{pstd}a consistent overall look while retaining flexibility for project‑specific{p_end}
-{pstd}customization. In this example, graphs will be combined in order to{p_end}
-{pstd}compare them.{p_end}
+{pstd}In the example below, the first graph is based on the base scheme and the second{p_end}
+{pstd}one is refined by modifying selected graphical elements directly in the analysis{p_end}
+{pstd}script. This approach allows you to maintain a consistent overall look while{p_end}
+{pstd}retaining flexibility for project-specific customization. In this example, graphs{p_end}
+{pstd}will be combined in order to compare them.{p_end}
 
 {phang2}{hline 3} {it:example combining scheme and styling tools} {hline 23}{p_end}
 {phang2}{* example_start}{...}{p_end}
@@ -172,14 +171,14 @@
 {phang2}set scheme gg_hue{p_end}
 
 {phang2}twoway ///{p_end}
-{phang2}{space 4}bar maletotal agegrp, horizontal xvarlab(Male)   ||{space 6}///{p_end}
-{phang2}{space 4}bar femtotal  agegrp, horizontal xvarlab(Female) ||{space 6}///{p_end}
-{phang2}{space 4}, ylabel(1(1)17, valuelabel labsize(*.8) angle(0)){space 7}///{p_end}
-{phang2}{space 4}xtitle("Population in millions") ytitle(""){space 15}///{p_end}
+{phang2}{space 4}bar maletotal agegrp, horizontal xvarlab(Male) ||{space 13}///{p_end}
+{phang2}{space 4}bar femtotal  agegrp, horizontal xvarlab(Female) ||{space 11}///{p_end}
+{phang2}{space 4}, ylabel(1(1)17, valuelabel labsize(*.8) angle(0)){space 10}///{p_end}
+{phang2}{space 4}xtitle("Population in millions") ytitle(""){space 17}///{p_end}
 {phang2}{space 4}xlabel(-10 "10" -7.5 "7.5" -5 "5" -2.5 "2.5" 2.5 5 7.5 10){space 2}///{p_end}
 {phang2}{space 4}legend(label(1 Male) label(2 Female) pos(1) ring(0) row(2)) ///{p_end}
-{phang2}{space 4}title("Base scheme (gg_hue)"){space 27}///{p_end}
-{phang2}{space 4}subtitle("No additional styling"){space 22}///{p_end}
+{phang2}{space 4}title("Base scheme (gg_hue)"){space 31}///{p_end}
+{phang2}{space 4}subtitle("No additional styling"){space 27}///{p_end}
 {phang2}{space 4}note("Source: US Census Bureau, Census 2000", span){space 9}///{p_end}
 {phang2}{space 4}name(g_base, replace){p_end}
 
