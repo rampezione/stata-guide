@@ -21,11 +21,11 @@
 {phang2}{stata . graph query, schemes}{p_end}
 
 {pstd}Set the default scheme for the rest of the session{p_end}
-{phang2}{stata . set schemes sj}{space 26}{error:// The previous official scheme of the {it:Stata Journal} is {cmd:sj}}{p_end}
-{phang2}{stata . set schemes stsj}{space 24}{error:// The current official scheme of the {it:Stata Journal} is {cmd:stsj}}{p_end}
+{phang2}{stata . set scheme sj}{space 27}{error:// The previous official scheme of the {it:Stata Journal} is {cmd:sj}}{p_end}
+{phang2}{stata . set scheme stsj}{space 25}{error:// The current official scheme of the {it:Stata Journal} is {cmd:stsj}}{p_end}
 
 {pstd}Compare different schemes without closing graph{p_end}
-{phang2}{stata . webuse auto}{p_end}
+{phang2}{stata . webuse auto, clear}{p_end}
 {phang2}{stata . twoway scatter price mpg}{space 16}{error:// Do not close the graph!}{p_end}
 {phang2}{stata . graph display Graph, scheme(economist)}{p_end}
 {phang2}{stata . graph display Graph, scheme(s2mono)}{p_end}
@@ -43,37 +43,36 @@
 {phang2}{stata . twoway scatter price mpg, scheme(stcolor) xtitle(Mileage)}{space 15}{error:// Change the title in x-axis}{p_end}
 
 {pstd}Set the scheme as the default scheme in future sessions{p_end}
-{phang2}{stata . set schemes stsj, permanently}{p_end}
+{phang2}{stata . set scheme stsj, permanently}{p_end}
 
 
 {dlgtab:Installing custom schemes}
 
 {pstd}Throughout this guide, all graph examples are tested using the {cmd:white_tableau} scheme,{p_end}
-{pstd}which is part of {cmd:schemepack} package written by Asjaq Naqvi:{p_end}
-{pstd}{browse "https://github.com/asjadnaqvi/stata-schemepack":GitHub / schemepack}. The style is{p_end} 
-{pstd}minimalistic, modern, and suitable for publications, web‑based documentation, and so on.{p_end}
+{pstd}which is part of {cmd:schemepack} package written by Asjaq Naqvi:{browse "https://github.com/asjadnaqvi/stata-schemepack":GitHub / schemepack}.{p_end} 
+{pstd}The style is minimalistic, modern, and suitable for publications.{p_end}
 
-{pstd}Schemepack can be installed from the Statistical Software Components (SSC) archive or GitHub.{p_end} 
+{pstd}Schemepack can be installed from the Statistical Software Components (SSC) archive or GitHub.{p_end}
 {pstd}GitHub files might contain latest updates that have not been currently pushed to SSC.{p_end}
 {phang2}{stata . ssc install schemepack, replace}{p_end}
-{phang2}{stata . net install schemepack, from("https://raw.githubusercontent.com/asjadnaqvi/stata-schemepack/main/installation/") replace}{p_end}
+{phang2}{stata ". net install schemepack, from("https://raw.githubusercontent.com/asjadnaqvi/stata-schemepack/main/installation/") replace"}{p_end}
 
 {pstd}After installation, you can use one of the schemes from this shemeback{p_end}
 {phang2}{stata . graph query, schemes}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(gg_ptol)}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(black_hue)}{p_end}
-{phang2}{stata . twoway scatter price mpg, scheme(white_tableau){error:// Asjad's default scheme}}{p_end}
+{phang2}{stata . twoway scatter price mpg, scheme(white_tableau){space 24}{error:// Asjad's default scheme}}{p_end}
 
 {pstd}A wide range of modern, publication‑ready graphics schemes is available from{p_end}
 {pstd}the Stata community. Below you may found a couple of them.{p_end}
 
-{phang2}{stata . ssc install blindschemes, replace}{error:// plotplain and plottig by Daniel Bischof}{p_end}
-{phang2}{stata . help blindschemes}{error:// {browse "https://www.danbischof.com/assets/pdf/Bischof2017Stata.pdf":New graphic schemes for Stata - plotplain and plottig} (pdf)}}{p_end}
+{phang2}{stata . ssc install blindschemes, replace}{space 38}{error:// plotplain and plottig by Daniel Bischof}{p_end}
+{phang2}{stata . help blindschemes}{space 54}{error:// {browse "https://www.danbischof.com/assets/pdf/Bischof2017Stata.pdf":New graphic schemes for Stata - plotplain and plottig} (pdf)}}{p_end}
 {phang2}{stata . help plotplain}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(plotplain)}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(plotplainblind){p_end}
 
-{phang2}{stata . net install cleanplots, from("https://tdmize.github.io/data") replace}{error:// {browse "https://www.trentonmize.com/software/cleanplots":cleanplots} by Trenton D. Mize}{p_end}
+{phang2}{stata . net install cleanplots, from("https://tdmize.github.io/data") replace}{space 2}{error:// {browse "https://www.trentonmize.com/software/cleanplots":cleanplots} by Trenton D. Mize}{p_end}
 {phang2}{stata . help cleanplots}{p_end}
 {phang2}{stata . twoway scatter price mpg, scheme(cleanplots){p_end}
 
@@ -85,19 +84,19 @@
 {pstd}styling programmatically within do‑files.{p_end} 
 
 {pstd}grstyle by Ben Jann is a Stata module to customize the overall look of graphs{p_end}
-{phang2}{stata . ssc install grstyle, replace}{error://{browse "https://github.com/benjann/grstyle": GitHub / grstyle}}{p_end}
-{phang2}{stata . ssc install palettes, replace}{error://{browse "https://repec.sowi.unibe.ch/stata/grstyle/index.html":grstyle} - Customizing Stata graphs made easy}{p_end}
-{phang2}{stata . ssc install colrspace, replace}{error://{browse "https://repec.sowi.unibe.ch/stata/grstyle/getting-started.html":Getting started} - How to use grstyle}{p_end}
-{phang2}{stata . help grstyle}{error://{browse "https://repec.sowi.unibe.ch/stata/grstyle/grstyle-set.html":Examples}}{p_end}
-{phang2}{stata . set scheme s2color}{error:// Start with a certain scheme (here s2color)}{p_end}
-{phang2}{stata . twoway scatter price mpg{error:// Draw a plot}{p_end}
-{phang2}{stata . grstyle init}{error:// Make adjustments}{p_end}
+{phang2}{stata . ssc install grstyle, replace}{space 14}{error://{browse "https://github.com/benjann/grstyle": GitHub / grstyle}}{p_end}
+{phang2}{stata . ssc install palettes, replace}{space 13}{error://{browse "https://repec.sowi.unibe.ch/stata/grstyle/index.html":grstyle} - Customizing Stata graphs made easy}{p_end}
+{phang2}{stata . ssc install colrspace, replace}{space 12}{error://{browse "https://repec.sowi.unibe.ch/stata/grstyle/getting-started.html":Getting started} - How to use grstyle}{p_end}
+{phang2}{stata . help grstyle}{space 30}{error://{browse "https://repec.sowi.unibe.ch/stata/grstyle/grstyle-set.html":Examples}}{p_end}
+{phang2}{stata . set scheme s2color}{space 24}{error:// Start with a certain scheme (here s2color)}{p_end}
+{phang2}{stata . twoway scatter price mpg}{space 18}{error:// Draw a plot}{p_end}
+{phang2}{stata . grstyle init}{space 30}{error:// Make adjustments}{p_end}
 {phang2}{stata . grstyle color background white}{p_end}
 {phang2}{stata . grstyle graphsize x 5}{p_end}
 {phang2}{stata . grstyle graphsize y 5}{p_end}
 {phang2}{stata . grstyle set noextend}{p_end}
-{phang2}{stata . twoway scatter price mpg{error:// Draw a plot}{p_end}
-{phang2}{stata . grstyle clear}{error:// Revert back to original scheme (here s2color)}{p_end}
+{phang2}{stata . twoway scatter price mpg}{space 18}{error:// Draw a plot}{p_end}
+{phang2}{stata . grstyle clear}{space 29}{error:// Revert back to original scheme (here s2color)}{p_end}
 
 {pstd}Alternatively, you can base your scheme on one of Stata’s official schemes{p_end}
 {pstd}, or on a scheme derived from an official Stata scheme. (see help scheme files){p_end}
@@ -105,7 +104,7 @@
 
 {pstd}Scheme schemename is stored in file scheme-schemename.scheme. For example, scheme s2color is{p_end}
 {pstd}stored in file scheme-s2color.scheme. You can find where a scheme file is located by typing{p_end}
-{phang2}{stata . which scheme-s2color.scheme{p_end}
+{phang2}{stata . which scheme-s2color.scheme}{p_end}
 
 {pstd}To create a new scheme, say mine, you need only create a file with the name scheme-mine.scheme{p_end}
 {pstd}in your PERSONAL directory. You should always base your scheme on a scheme shipped with Stata{p_end}
@@ -140,11 +139,13 @@
 {phang2}{txt}{...}{p_end}
 {phang2}{hline 48}{p_end}
 {phang2}{p_end}
-{pstd}Install the above scheme, set it, and compare the modified scheme with the original one.{p_end}
+{pstd}Install the above scheme (see the net install below), set the scheme, and compare{p_end}
+{pstd}the modified scheme with the original one. In the end, reset URL to default.{p_end}
 {phang2}{stata ". net install scheme-mine, from("https://github.com/rampezione/stata-guide/raw/main/guides/schemes/")}{p_end}
 {phang2}{stata . set scheme mine}{p_end}
 {phang2}{stata . graph bar rep78, over(foreign) scheme(s2color)}{p_end}
-{phang2}{stata . graph bar rep78, over(foreign) scheme(mine)}
+{phang2}{stata . graph bar rep78, over(foreign) scheme(mine)}{p_end}
+{phang2}{stata . webuse set}{p_end}
 
 
 {pstd}In practice, graph schemes and styling tools can also be combined.{p_end}
