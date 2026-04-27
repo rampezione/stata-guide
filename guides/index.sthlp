@@ -36,22 +36,22 @@
 
 {title:Main topics}
 
-{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/data-processing.sthlp": Data Processing}{p_end}
+{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/data-processing.sthlp":Data Processing}{p_end}
 {pstd}{space 5}Basic operations, data import and export, data exploration and summarization, changing data types, creating new variables, ...{p_end}
 
-{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-transformation/data-transformation.sthlp": Data Transformation}{error: {it:Under construction}}{p_end}
+{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-transformation/data-transformation.sthlp":Data Transformation}{error: {it:Under construction}}{p_end}
 {pstd}{space 5}Subsetting data, replacing and modifying data, reshaping datasets, merging and appending data, ...{p_end}
 
-{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-analysis/data-analysis.sthlp": Data Analysis}{error: {it:Under construction}}{p_end}
+{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-analysis/data-analysis.sthlp":Data Analysis}{error: {it:Under construction}}{p_end}
 {pstd}{space 5}Descriptive statistics, hypothesis testing, model fitting, diagnostics, postestimation, ...{p_end}
 
-{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp": Data Visualization}{error: {it:Under construction}}{p_end}
+{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":Data Visualization}{error: {it:Under construction}}{p_end}
 {pstd}{space 5}Applying themes, plotting graphs, plot customization, saving plots, ...{p_end}
 
-{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-programming/data-programming.sthlp": Data Programming}{error: {it:Under construction}}{p_end}
+{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-programming/data-programming.sthlp":Data Programming}{error: {it:Under construction}}{p_end}
 {pstd}{space 5}Scalars, matrices, macros, stored r-class and e-class objects, loops, automation, ...{p_end}
 
-{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/miscellaneous/miscellaneous.sthlp": Miscellaneous}{error: {it:Under construction}}{p_end}
+{pstd}{space 2}{view "https://github.com/rampezione/stata-guide/raw/main/guides/miscellaneous/miscellaneous.sthlp":Miscellaneous}{error: {it:Under construction}}{p_end}
 {pstd}{space 5}Tips, tricks, troubleshooting, ...{p_end}
 
 
