@@ -105,7 +105,7 @@
 {phang2}{stata . tabplot rep78}{p_end}
 {phang2}{stata . tabplot rep78, showval horizontal}{p_end}
 
-{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":. tabplot foreign rep78,}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":. tabplot foreign rep78, ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":{space 4}percent(foreign) sep(foreign) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":{space 4}bar1(bcolor("53 119 106")) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":{space 4}bar2(bcolor("247 141 30")) ///}{p_end}
