@@ -90,6 +90,8 @@
 {phang2}{stata . catplot, over(rep78)}{p_end}
 {phang2}{stata . catplot, over(rep78) percent}{p_end}
 {phang2}{stata . catplot, over(rep78) over(foreign) percent(foreign)}{p_end}
+{phang2}{stata . catplot, by(foreign, l1title(Repair record 1978)) over(rep78) percent(rep78) blabel(bar, format(%02.0f)) ysc(r(0 105))}{p_end}
+
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":. catplot, over(rep78) over(foreign) percent(foreign) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}stack asyvars legend(rows(1) ring(1) pos(6)) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}bar(1, bcolor("0 121 154")) ///}{p_end}
@@ -97,13 +99,18 @@
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}bar(3, bcolor("128 195 66")) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}bar(4, bcolor("247 141 30")) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}bar(5, bcolor("255 215 104"))}{p_end}
-{phang2}{stata . catplot, by(foreign, l1title(Repair record 1978)) over(rep78) percent(rep78) blabel(bar, format(%02.0f)) ysc(r(0 105))}{p_end}
 
 {pstd}Tabplot{p_end}
 {phang2}{stata . ssc install tabplot}{p_end}
 {phang2}{stata . tabplot rep78}{p_end}
 {phang2}{stata . tabplot rep78, showval horizontal}{p_end}
-{phang2}{stata . tabplot foreign rep78, percent(foreign) sep(foreign) bar1(bcolor("53 119 106")) bar2(bcolor("247 141 30")) showval(offset(0.05) format(%2.1f)) subtitle(% by origin)}{p_end}
+
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":. tabplot foreign rep78,}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":{space 4}percent(foreign) sep(foreign) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":{space 4}bar1(bcolor("53 119 106")) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":{space 4}bar2(bcolor("247 141 30")) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":{space 4}showval(offset(0.05) format(%2.1f)) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Tabplot1.do":{space 4}subtitle(% by origin)}{p_end}
 
 
 {dlgtab:Discrete X, continuous Y}
@@ -156,4 +163,4 @@
 
 {hline}
 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":← Back to Data Visualization} / {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/003_bivariate_graphs.sthlp":next (Univariate graphs)}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":← Back to Data Visualization} / {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/003_bivariate_graphs.sthlp":next (Graphs for two+ continuous variables)}
