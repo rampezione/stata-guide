@@ -93,6 +93,7 @@
 {phang2}{stata . catplot, by(foreign, l1title(Repair record 1978)) over(rep78) percent(rep78) blabel(bar, format(%02.0f)) ysc(r(0 105))}{p_end}
 
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":. catplot, over(rep78) over(foreign) percent(foreign) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}blabel(bar, pos(center) format(%3.0f)) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}stack asyvars legend(rows(1) ring(1) pos(6)) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}bar(1, bcolor("0 121 154")) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}bar(2, bcolor("53 119 106")) ///}{p_end}
