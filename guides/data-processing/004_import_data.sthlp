@@ -1,7 +1,7 @@
 {smcl}
 {* *! Stata version 19.5 --- 2025-04-20}{...}
 
-{hilite: Setup}{...}
+{hilite: How to load, enter, and save the data}{...}
 {right:{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/data-processing.sthlp":Data processing}}
 
 {hline}
@@ -16,7 +16,7 @@
 {pstd}Same using clear as an option. This specifies that the data in memory will be replaced.{p_end}
 {phang2}{stata `". use "C:\MyProjects\MyData.dta", clear"'}{p_end}
 
-{pstd}Change the current working directory and load Stata dataset from there{p_end}
+{pstd}Change the current working directory and load a Stata dataset from there{p_end}
 {phang2}{stata `". cd "C:\MyProjects\""'}{p_end}
 {phang2}{stata . use MyData}{p_end}
 
@@ -56,10 +56,10 @@
 {pstd}Report URL from which datasets will be obtained{p_end}
 {phang2}{stata . webuse query}{p_end}
 
-{pstd}Load an example dataset from Stata website{p_end}
+{pstd}Load an example dataset from the Stata website{p_end}
 {phang2}{stata . webuse auto, clear}{p_end}
 
-{pstd}Load a dataset from Stata manual{p_end}
+{pstd}Load a dataset from the Stata manual{p_end}
 {phang2}{stata ". use https://www.stata-press.com/data/r19/lifeexp, clear"}{p_end}
 
 {pstd}Specify URL from which dataset will be obtained, load the dataset, and{p_end}
