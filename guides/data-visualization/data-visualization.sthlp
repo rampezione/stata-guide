@@ -5,7 +5,7 @@
 
 {hline}
 
-{pstd}{error: {it:Under construction.} This section is incomplete and will be updated as the guide evolves.}{p_end}
+{pstd}{error: This section is partially complete (Themes and graphs for one variable) and will be updated as the guide evolves.}{p_end}
 
 {pstd}This section focuses on data visualization in Stata. It covers how to design,{p_end}
 {pstd}customize, and export graphs for data exploration, analysis, and presentation.{p_end}
