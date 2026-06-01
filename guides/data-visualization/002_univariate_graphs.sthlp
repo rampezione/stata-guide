@@ -92,7 +92,7 @@
 {phang2}{stata . catplot, over(rep78) over(foreign) percent(foreign)}{p_end}
 {phang2}{stata . catplot, by(foreign, l1title(Repair record 1978)) over(rep78) percent(rep78) blabel(bar, format(%02.0f)) ysc(r(0 105))}{p_end}
 
-{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":. catplot, over(rep78) over(foreign) percent(foreign) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":. catplot, over(rep78) over(foreign, axis(noline)) percent(foreign) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}blabel(bar, pos(center) format(%3.0f)) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}stack asyvars legend(rows(1) ring(1) pos(6)) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Catplot1.do":{space 4}bar(1, bcolor("0 121 154")) ///}{p_end}
@@ -122,10 +122,10 @@
 {pstd}Box plot{p_end}
 {phang2}{stata . graph hbox mpg, ylabel(0(5)40) over(rep78)}{p_end}
 {phang2}{stata . graph hbox mpg, ylabel(0(5)40) over(rep78) over(foreign) scheme(s2color) nofill}{p_end}
-{phang2}{stata . graph hbox mpg, over(rep78) over(foreign) asyvars title("Box plot of mileage by repair record and origin") legend(rows(1) position(12))}{p_end}
+{phang2}{stata . graph hbox mpg, over(rep78) over(foreign, axis(noline)) asyvars title("Box plot of mileage by repair record and origin") legend(rows(1) position(12))}{p_end}
 
 {pstd}Cumulative distribution{p_end}
-{phang2}{stata . cdfplot mpg, normal by(foreign) opt1(lc(red green)) opt2(lp(dash dash))}{p_end}
+{phang2}{stata . cdfplot mpg, normal by(foreign) opt1(lc(green red)) opt2(lp(dash dash))}{p_end}
 
 {pstd}Oneway dot plot{p_end}
 {phang2}{stata . stripplot price, vertical ytitle("Price") ylabel(,angle(0)) scheme(s1mono) plotregion(lstyle(none)) stack width(500) ms(T) over(foreign)}{p_end}
