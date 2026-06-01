@@ -1,4 +1,4 @@
-catplot, over(rep78) over(foreign) percent(foreign) ///
+catplot, over(rep78) over(foreign, axis(noline)) percent(foreign) ///
     blabel(bar, pos(center) format(%3.0f)) ///
     stack asyvars legend(rows(1) ring(1) pos(6)) ///
     bar(1, bcolor("0 121 154")) ///
