@@ -44,7 +44,7 @@
 {phang2}{stata . twoway bar change date in 1/60, fcolor("255 215 104") lcolor("247 141 30") barw(.6)}{p_end}
 
 {pstd}Combined with line plot{p_end}
-{phang2}{stata . twoway line close date || bar change date || in 1/60{p_end}
+{phang2}{stata . twoway line close date || bar change date || in 1/60}{p_end}
 
 {pstd}Improved version{p_end}
 {phang2}. twoway ///{p_end}
