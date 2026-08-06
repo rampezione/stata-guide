@@ -39,7 +39,7 @@
 {pstd}Two-way bar{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway bar change date}{p_end}
-{phang2}{stata . twoway bar change date in 1/60}{space 5}{error:// First 60 days}{p_end}
+{phang2}{stata . twoway bar change date in 1/60}{space 25}{error:// First 60 days}{p_end}
 {phang2}{stata . twoway bar change date in 1/60, fcolor("255 215 104") lcolor("247 141 30")}{p_end}
 {phang2}{stata . twoway bar change date in 1/60, fcolor("255 215 104") lcolor("247 141 30") barw(.6)}{p_end}
 
