@@ -43,10 +43,10 @@
 {phang2}{stata . twoway bar change date in 1/60, fcolor("255 215 104") lcolor("247 141 30")}{p_end}
 {phang2}{stata . twoway bar change date in 1/60, fcolor("255 215 104") lcolor("247 141 30") barw(.6)}{p_end}
 
-{phang2}Combined with line plot{p_end}
+{pstd}Combined with line plot{p_end}
 {phang2}{stata . twoway line close date || bar change date || in 1/60{p_end}
 
-{phang2}Improved version{p_end}
+{pstd}Improved version{p_end}
 {phang2}. twoway ///{p_end}
 {phang2}{space 4}line close date, yaxis(1) || ///{p_end}
 {phang2}{space 4}bar change date, yaxis(2) || in 1/60, ///{p_end}
