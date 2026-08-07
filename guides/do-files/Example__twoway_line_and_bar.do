@@ -1,5 +1,5 @@
 clear
-sysuse pop2000, clear
+sysuse sp500, clear
 
 * Improved version
 twoway ///
