@@ -36,7 +36,7 @@
 {phang2}{stata . twoway area mpg price, sort(price) xlabel(3000(2000)17000) fcolor("255 215 104") lcolor("247 141 30") base(20)}{p_end}
 {phang2}{stata . twoway area mpg price, sort(price) xlabel(10(5)45) ylabel(2000(2000)16000) color("247 141 30") base(20) horizontal}{p_end}
 
-{pstd}Two-way bar{p_end}
+{pstd}Two-way bar plot{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway bar change date}{p_end}
 {phang2}{stata . twoway bar change date in 1/60}{space 25}{error:// First 60 days}{p_end}
@@ -59,13 +59,13 @@
 {phang2}{space 4}note("Source: Yahoo!Finance and Commodity Systems, Inc."){p_end}
 {phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__twoway_line_and_bar.do":click to run})}{p_end}
 
-{pstd}Two-way bar{p_end}
+{pstd}Two-way dot plot{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway dot change date in 1/60}{space 25}{error:// First 60 days}{p_end}
 {phang2}{stata . twoway dot change date in 1/60, dotext(n)}{space 14}{error:// To prevent the dots from extending across the range of y}{p_end}
 {phang2}{stata . twoway dot change date in 1/60, horizontal}{p_end}
 
-{pstd}Two-way dropline{p_end}
+{pstd}Two-way dropped-line plot{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway dropline change date in 1/60}{p_end}
 {phang2}{stata . twoway dropline change date in 1/60, yline(0, lstyle(foreground))}{p_end}
@@ -84,15 +84,37 @@
 {phang2}{space 9}"longer than predicted life expectancy"){p_end}
 {phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__twoway_dropline_with_labels.do":click to run})}{p_end}
 
+{pstd}Range plot with capped spikes{p_end}
+{phang2}{stata . sysuse sp500, clear}{p_end}
+{phang2}{stata . twoway rcap high low date in 1/37}{p_end}
+{phang2}{stata . twoway rcap high low date || scatter close date || in 1/37, legend(position(6) ring(0))}{space 5}{error:// Combined with a scatterplot to produce hi-lo-middle graph}{p_end}
+{phang2}{stata . twoway rcap high low date || scatter close date || in 1/37, legend(position(6) ring(0) region(lcolor(black) fcolor(#F0F0F0)))}{p_end}
+
+{pstd}Range plot with spikes capped with marker symbols){p_end}
+{phang2}{stata . twoway rcapsym high low date in 1/37}{space 5}{error:// Default symbol is circle}{p_end}
+{phang2}{stata . twoway rcapsym high low date in 1/37, lcolor(orange)}{p_end}
+{phang2}{stata . twoway rcapsym high low date in 1/37, lcolor(orange) msymbol(diamond_hollow)}{p_end}
+
+{pstd}Range plot with area shading{p_end}
+{phang2}{stata . sysuse sp500, clear}{p_end}
+{phang2}{stata . twoway rarea high low date in 1/37}{p_end}
+
+{pstd}Scatterplot with shaded area{p_end}
 
 
 {dlgtab:More information}
 
 {pstd}Help files{p_end}
 {phang2}{stata . help graph matrix}{p_end}
+{phang2}{stata . help twoway}{p_end}
 {phang2}{stata . help twoway area}{p_end}
 {phang2}{stata . help twoway bar}{p_end}
 {phang2}{stata . help twoway connected}{p_end}
+{phang2}{stata . help twoway dot}{p_end}
+{phang2}{stata . help twoway dropline}{p_end}
+{phang2}{stata . help twoway rarea}{p_end}
+{phang2}{stata . help twoway rcap}{p_end}
+{phang2}{stata . help twoway rcapsym}{p_end}
 {phang2}{stata . help twoway scatter}{p_end}
 
 {pstd}References{p_end}
