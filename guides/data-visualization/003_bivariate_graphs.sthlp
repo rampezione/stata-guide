@@ -59,6 +59,35 @@
 {phang2}{space 4}note("Source: Yahoo!Finance and Commodity Systems, Inc."){p_end}
 {phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__twoway_line_and_bar.do":click to run})}{p_end}
 
+{pstd}Two-way bar{p_end}
+{phang2}{stata . sysuse sp500, clear}{p_end}
+{phang2}{stata . twoway dot change date in 1/60}{space 25}{error:// First 60 days}{p_end}
+{phang2}{stata . twoway dot change date in 1/60, dotext(n)}{space 14}{error:// To prevent the dots from extending across the range of y}{p_end}
+{phang2}{stata . twoway dot change date in 1/60, horizontal}{p_end}
+
+{pstd}Two-way dropline{p_end}
+{phang2}{stata . sysuse sp500, clear}{p_end}
+{phang2}{stata . twoway dropline change date in 1/60}{p_end}
+{phang2}{stata . twoway dropline change date in 1/60, yline(0, lstyle(foreground))}{p_end}
+
+{pstd}Dropped-line plot with labeled points.{p_end}
+{phang2}{stata . sysuse lifeexp, clear}{p_end}
+{phang2}{stata . keep if region==3}{p_end}
+{phang2}{stata . generate lngnp = ln(gnppc)}{p_end}
+{phang2}{stata . quietly regress lexp lngnp}{p_end}
+{phang2}{stata . predict r, resid}{p_end}
+{phang2}{stata . twoway dropline r gnppc, yline(0, lstyle(foreground)) mlabel(country) mlabpos(9) ///{p_end}
+{phang2}{space 4}ylab(-6(1)6) ///{p_end}
+{phang2}{space 4}subtitle("Regression of life expectancy on ln(gnp)", pos(11)) ///{p_end}
+{phang2}{space 4}note("Residuals in years; positive values indicate" ///{p_end}
+{phang2}{space 9}"longer than predicted life expectancy"){p_end}
+{phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__twoway_dropline_with_labels.do":click to run})}{p_end}
+
+
+
+
+
+
 {dlgtab:More information}
 
 {pstd}Help files{p_end}
