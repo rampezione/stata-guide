@@ -76,16 +76,12 @@
 {phang2}{stata . generate lngnp = ln(gnppc)}{p_end}
 {phang2}{stata . quietly regress lexp lngnp}{p_end}
 {phang2}{stata . predict r, resid}{p_end}
-{phang2}{stata . twoway dropline r gnppc, yline(0, lstyle(foreground)) mlabel(country) mlabpos(9) ///{p_end}
-{phang2}{space 4}ylab(-6(1)6) ///{p_end}
+{phang2}{stata . twoway dropline r gnppc, yline(0, lstyle(foreground)) {p_end}
+{phang2}{space 4}ylab(-6(1)6) mlabel(country) mlabpos(9) ///{p_end}
 {phang2}{space 4}subtitle("Regression of life expectancy on ln(gnp)", pos(11)) ///{p_end}
 {phang2}{space 4}note("Residuals in years; positive values indicate" ///{p_end}
 {phang2}{space 9}"longer than predicted life expectancy"){p_end}
 {phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__twoway_dropline_with_labels.do":click to run})}{p_end}
-
-
-
-
 
 
 {dlgtab:More information}
