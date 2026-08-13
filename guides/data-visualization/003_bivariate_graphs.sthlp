@@ -28,7 +28,7 @@
 
 {phang2}{stata . twoway connected mpg price, mfcolor("255 215 104") mlcolor("247 141 30") sort(price) lcolor(red)}{p_end}
 {phang2}{stata . twoway scatter mpg price, mfcolor("255 215 104") mlcolor("247 141 30") sort(price) lcolor(red) connect(l)}{space 7}{error:// Same than twoway connected}{p_end}
-{phang2}{stata . twoway connected mpg price, mfcolor("255 215 104") mlcolor("247 141 30") sort(price) lcolor(red) connect(none)}{space 3}{error:// Same than twoway scatter}{p_end}
+{phang2}{stata . twoway connected mpg price, mfcolor("255 215 104") mlcolor("247 141 30") sort(price) lcolor(red) connect(none)}{space 2}{error:// Same than twoway scatter}{p_end}
 
 {pstd}{bf:Two-way line plot with area shading}{p_end}
 {phang2}{stata . twoway area mpg price, sort(price)}{p_end}
@@ -36,7 +36,7 @@
 {phang2}{stata . twoway area mpg price, sort(price) xlabel(3000(2000)17000) fcolor("255 215 104") lcolor("247 141 30") base(20)}{p_end}
 {phang2}{stata . twoway area mpg price, sort(price) xlabel(10(5)45) ylabel(2000(2000)16000) color("247 141 30") base(20) horizontal}{p_end}
 
-{pstd}{bf:Two-way bar plot0{p_end}
+{pstd}{bf:Two-way bar plot}{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway bar change date}{space 11}{error:// All observations}{p_end}
 {phang2}{stata . twoway bar change date in 1/60}{space 3}{error:// First 60 days}{p_end}
@@ -47,17 +47,16 @@
 {phang2}{stata . twoway line close date || bar change date || in 1/60}{p_end}
 
 {pstd}Improved version{p_end}
-{phang2}. twoway ///{p_end}
-{phang2}{space 4}line close date, yaxis(1) || ///{p_end}
-{phang2}{space 4}bar change date, yaxis(2) || in 1/60, ///{p_end}
-{phang2}{space 4}ysca(axis(1) r(1000 1400)) ylab(1200(50)1400, axis(1)) ///{p_end}
-{phang2}{space 4}ysca(axis(2) r(-50 300)) ylab(-50 0 50, axis(2)) ///{p_end}
-{phang2}{space 4}ytick(-50(25)50, axis(2) grid) ///{p_end}
-{phang2}{space 4}legend(off) xtitle("Date") title("S&P 500") ///{p_end}
-{phang2}{space 4}yline(1150, axis(1) lstyle(foreground)) ///{p_end}
-{phang2}{space 4}subtitle("January to March 2001") ///{p_end}
-{phang2}{space 4}note("Source: Yahoo!Finance and Commodity Systems, Inc."){p_end}
-{phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__twoway_line_and_bar.do":click to run})}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":. twoway ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}line close date, yaxis(1) || ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}bar change date, yaxis(2) || in 1/60, ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}ysca(axis(1) r(1000 1400)) ylab(1200(50)1400, axis(1)) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}ysca(axis(2) r(-50 300)) ylab(-50 0 50, axis(2)) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}ytick(-50(25)50, axis(2) grid) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}legend(off) xtitle("Date") title("S&P 500") ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}yline(1150, axis(1) lstyle(foreground)) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}subtitle("January to March 2001") ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}note("Source: Yahoo!Finance and Commodity Systems, Inc.")}{p_end}
 
 {pstd}{bf:Two-way dot plot}{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
@@ -83,11 +82,12 @@
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":{space 4}"longer than predicted life expectancy")}{p_end}
 
 {pstd}{bf:Range plot with capped spikes}{p_end}
+{phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway rcap high low date in 1/37}{p_end}
 {phang2}{stata . twoway rcap high low date || scatter close date || in 1/37, legend(position(6) ring(0))}{space 5}{error:// Combined with a scatterplot to produce hi-lo-middle graph}{p_end}
 {phang2}{stata . twoway rcap high low date || scatter close date || in 1/37, legend(position(6) ring(0) region(lcolor(black) fcolor(#F0F0F0)))}{p_end}
 
-{pstd}Range plot with spikes capped with marker symbols){p_end}
+{pstd}Range plot with spikes capped with marker symbols}{p_end}
 {phang2}{stata . twoway rcapsym high low date in 1/37}{space 5}{error:// Default symbol is circle}{p_end}
 {phang2}{stata . twoway rcapsym high low date in 1/37, lcolor(orange)}{p_end}
 {phang2}{stata . twoway rcapsym high low date in 1/37, lcolor(orange) msymbol(diamond_hollow)}{p_end}
