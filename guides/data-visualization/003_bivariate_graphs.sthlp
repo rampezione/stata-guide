@@ -88,7 +88,7 @@
 {phang2}{stata . twoway rcap high low date || scatter close date || in 1/37, legend(position(6) ring(0))}{space 5}{error:// Combined with a scatterplot to produce hi-lo-middle graph}{p_end}
 {phang2}{stata . twoway rcap high low date || scatter close date || in 1/37, legend(position(6) ring(0) region(lcolor(black) fcolor(#F0F0F0)))}{p_end}
 
-{pstd}Range plot with spikes capped with marker symbols}{p_end}
+{pstd}Range plot with spikes capped with marker symbols{p_end}
 {phang2}{stata . twoway rcapsym high low date in 1/37}{space 5}{error:// Default symbol is circle}{p_end}
 {phang2}{stata . twoway rcapsym high low date in 1/37, lcolor(orange)}{p_end}
 {phang2}{stata . twoway rcapsym high low date in 1/37, lcolor(orange) msymbol(diamond_hollow)}{p_end}
@@ -140,7 +140,9 @@
 {phang2}{stata . help twoway connected}{p_end}
 {phang2}{stata . help twoway dot}{p_end}
 {phang2}{stata . help twoway dropline}{p_end}
+{phang2}{stata . help twoway pcspike}{p_end}
 {phang2}{stata . help twoway rarea}{p_end}
+{phang2}{stata . help twoway rbar}{p_end}
 {phang2}{stata . help twoway rcap}{p_end}
 {phang2}{stata . help twoway rcapsym}{p_end}
 {phang2}{stata . help twoway scatter}{p_end}
