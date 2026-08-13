@@ -66,7 +66,6 @@
 {phang2}{stata . twoway dot change date in 1/60, horizontal}{p_end}
 
 {pstd}Two-way dropped-line plot{p_end}
-{phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway dropline change date in 1/60}{p_end}
 {phang2}{stata . twoway dropline change date in 1/60, yline(0, lstyle(foreground))}{p_end}
 
@@ -84,7 +83,6 @@
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":{space 4}"longer than predicted life expectancy")}{p_end}
 
 {pstd}Range plot with capped spikes{p_end}
-{phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway rcap high low date in 1/37}{p_end}
 {phang2}{stata . twoway rcap high low date || scatter close date || in 1/37, legend(position(6) ring(0))}{space 5}{error:// Combined with a scatterplot to produce hi-lo-middle graph}{p_end}
 {phang2}{stata . twoway rcap high low date || scatter close date || in 1/37, legend(position(6) ring(0) region(lcolor(black) fcolor(#F0F0F0)))}{p_end}
@@ -95,7 +93,6 @@
 {phang2}{stata . twoway rcapsym high low date in 1/37, lcolor(orange) msymbol(diamond_hollow)}{p_end}
 
 {pstd}Range plot with area shading{p_end}
-{phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway rarea high low date in 1/37}{p_end}
 
 {pstd}Range plot with bars{p_end}
@@ -114,8 +111,22 @@
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar2.do":{space 4}|| in 1/37, ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar2.do":{space 4}legend(position(6) ring(0) region(lcolor(black) fcolor(#F0F0F0)))}{p_end}
 
-{pstd}Paired-coordinate plot with spikes{p_end}
+{pstd}{bf:Paired-coordinate plot with spikes}{p_end}
+{pstd}A paired-coordinate spike plot draws a spike (or line) for each observation in the dataset. The line starts at the coordinate (y1var,x1var) and ends at the coordinate (y2var,x2var).{p_end}
+{phang2}{stata . sysuse nlswide1, clear}{p_end}
+{phang2}{stata . list occ wage68 ttl_exp68 wage88 ttl_exp88}{p_end}
+{phang2}{stata . twoway pcspike wage68 ttl_exp68 wage88 ttl_exp88}{p_end}
 
+{pstd}Combined with a twoway scatter plot with the addition of labeled markers.{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_pcspike_with_scatter.do":. twoway pcspike wage68 ttl_exp68 wage88 ttl_exp88 ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_pcspike_with_scatter.do":{space 4}|| scatter wage68 ttl_exp68, msym(O) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_pcspike_with_scatter.do":{space 4}|| scatter wage88 ttl_exp88, msym(O) pstyle(p4) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_pcspike_with_scatter.do":{space 4}mlabel(occ) xscale(range(17)) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_pcspike_with_scatter.do":{space 4}title("Change in US women's experience and earnings") ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_pcspike_with_scatter.do":{space 4}subtitle("by occupation, 1968 to 1988") ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_pcspike_with_scatter.do":{space 4}ytitle(Earnings) xtitle(Total experience) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_pcspike_with_scatter.do":{space 4}note("Source: National Longitudinal Survey of Young Women") ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_pcspike_with_scatter.do":{space 4}legend(order(2 "1968" 3 "1988"))}{p_end}
 
 
 {dlgtab:More information}
