@@ -12,7 +12,7 @@
 
 {dlgtab:Two continuous variables}
 
-{pstd}Scatterplot{p_end}
+{pstd}{bf:Scatterplot}{p_end}
 {phang2}{stata . webuse auto, clear}{p_end}
 {phang2}{stata . graph matrix mpg price weight}{p_end}
 {phang2}{stata . graph matrix mpg price weight, half}{p_end}
@@ -30,13 +30,13 @@
 {phang2}{stata . twoway scatter mpg price, mfcolor("255 215 104") mlcolor("247 141 30") sort(price) lcolor(red) connect(l)}{space 7}{error:// Same than twoway connected}{p_end}
 {phang2}{stata . twoway connected mpg price, mfcolor("255 215 104") mlcolor("247 141 30") sort(price) lcolor(red) connect(none)}{space 3}{error:// Same than twoway scatter}{p_end}
 
-{pstd}Two-way line plot with area shading{p_end}
+{pstd}{bf:Two-way line plot with area shading}{p_end}
 {phang2}{stata . twoway area mpg price, sort(price)}{p_end}
 {phang2}{stata . twoway area mpg price, sort(price) xlabel(3000(2000)17000) fcolor("255 215 104") lcolor("247 141 30")}{p_end}
 {phang2}{stata . twoway area mpg price, sort(price) xlabel(3000(2000)17000) fcolor("255 215 104") lcolor("247 141 30") base(20)}{p_end}
 {phang2}{stata . twoway area mpg price, sort(price) xlabel(10(5)45) ylabel(2000(2000)16000) color("247 141 30") base(20) horizontal}{p_end}
 
-{pstd}Two-way bar plot{p_end}
+{pstd}{bf:Two-way bar plot0{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway bar change date}{space 11}{error:// All observations}{p_end}
 {phang2}{stata . twoway bar change date in 1/60}{space 3}{error:// First 60 days}{p_end}
@@ -59,17 +59,17 @@
 {phang2}{space 4}note("Source: Yahoo!Finance and Commodity Systems, Inc."){p_end}
 {phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__twoway_line_and_bar.do":click to run})}{p_end}
 
-{pstd}Two-way dot plot{p_end}
+{pstd}{bf:Two-way dot plot}{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway dot change date in 1/60}{space 17}{error:// First 60 days}{p_end}
 {phang2}{stata . twoway dot change date in 1/60, dotext(n)}{space 6}{error:// To prevent the dots from extending across the range of y}{p_end}
 {phang2}{stata . twoway dot change date in 1/60, horizontal}{p_end}
 
-{pstd}Two-way dropped-line plot{p_end}
+{pstd}{bf:Two-way dropped-line plot}{p_end}
 {phang2}{stata . twoway dropline change date in 1/60}{p_end}
 {phang2}{stata . twoway dropline change date in 1/60, yline(0, lstyle(foreground))}{p_end}
 
-{pstd}Dropped-line plot with labeled points{p_end}
+{pstd}With labeled points{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":. sysuse lifeexp, clear}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":. keep if region==3}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":. generate lngnp = ln(gnppc)}{p_end}
@@ -82,7 +82,7 @@
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":{space 4}note("Residuals in years; positive values indicate" ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":{space 4}"longer than predicted life expectancy")}{p_end}
 
-{pstd}Range plot with capped spikes{p_end}
+{pstd}{bf:Range plot with capped spikes}{p_end}
 {phang2}{stata . twoway rcap high low date in 1/37}{p_end}
 {phang2}{stata . twoway rcap high low date || scatter close date || in 1/37, legend(position(6) ring(0))}{space 5}{error:// Combined with a scatterplot to produce hi-lo-middle graph}{p_end}
 {phang2}{stata . twoway rcap high low date || scatter close date || in 1/37, legend(position(6) ring(0) region(lcolor(black) fcolor(#F0F0F0)))}{p_end}
@@ -92,10 +92,10 @@
 {phang2}{stata . twoway rcapsym high low date in 1/37, lcolor(orange)}{p_end}
 {phang2}{stata . twoway rcapsym high low date in 1/37, lcolor(orange) msymbol(diamond_hollow)}{p_end}
 
-{pstd}Range plot with area shading{p_end}
+{pstd}{bf:Range plot with area shading}{p_end}
 {phang2}{stata . twoway rarea high low date in 1/37}{p_end}
 
-{pstd}Range plot with bars{p_end}
+{pstd}{bf:Range plot with bars}{p_end}
 {phang2}{stata . twoway rbar high low date in 1/37}{p_end}
 {phang2}{stata . twoway rbar high low date in 1/37, barwidth(.6)}{p_end}
 
