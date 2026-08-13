@@ -1,6 +1,6 @@
 . twoway ///
-    line close date, yaxis(1) ///
-    || bar change date, yaxis(2) ///
+    line close date, yaxis(1) lcolor(#3d34a3) ///
+    || bar change date, yaxis(2) color("255 215 104") lcolor("247 141 30") ///
     || in 1/60, ///
     ysca(axis(1) r(1000 1400)) ylab(1200(50)1400, axis(1)) ///
     ysca(axis(2) r(-50 300)) ylab(-50 0 50, axis(2)) ///
