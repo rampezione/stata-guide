@@ -28,7 +28,7 @@
 
 {phang2}{stata . twoway connected mpg price, mfcolor("255 215 104") mlcolor("247 141 30") sort(price) lcolor(red)}{p_end}
 {phang2}{stata . twoway scatter mpg price, mfcolor("255 215 104") mlcolor("247 141 30") sort(price) lcolor(red) connect(l)}{space 7}{error:// Same than twoway connected}{p_end}
-{phang2}{stata . twoway connected mpg price, mfcolor("255 215 104") mlcolor("247 141 30") sort(price) lcolor(red) connect(none)}{space 2}{error:// Same than twoway scatter}{p_end}
+{phang2}{stata . twoway connected mpg price, mfcolor("255 215 104") mlcolor("247 141 30") sort(price) lcolor(red) connect(none)}{space 3}{error:// Same than twoway scatter}{p_end}
 
 {pstd}Two-way line plot with area shading{p_end}
 {phang2}{stata . twoway area mpg price, sort(price)}{p_end}
@@ -38,8 +38,8 @@
 
 {pstd}Two-way bar plot{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
-{phang2}{stata . twoway bar change date}{p_end}
-{phang2}{stata . twoway bar change date in 1/60}{space 25}{error:// First 60 days}{p_end}
+{phang2}{stata . twoway bar change date}{space 11}{error:// All observations}{p_end}
+{phang2}{stata . twoway bar change date in 1/60}{space 3}{error:// First 60 days}{p_end}
 {phang2}{stata . twoway bar change date in 1/60, fcolor("255 215 104") lcolor("247 141 30")}{p_end}
 {phang2}{stata . twoway bar change date in 1/60, fcolor("255 215 104") lcolor("247 141 30") barw(.6)}{p_end}
 
@@ -61,8 +61,8 @@
 
 {pstd}Two-way dot plot{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
-{phang2}{stata . twoway dot change date in 1/60}{space 25}{error:// First 60 days}{p_end}
-{phang2}{stata . twoway dot change date in 1/60, dotext(n)}{space 14}{error:// To prevent the dots from extending across the range of y}{p_end}
+{phang2}{stata . twoway dot change date in 1/60}{space 17}{error:// First 60 days}{p_end}
+{phang2}{stata . twoway dot change date in 1/60, dotext(n)}{space 6}{error:// To prevent the dots from extending across the range of y}{p_end}
 {phang2}{stata . twoway dot change date in 1/60, horizontal}{p_end}
 
 {pstd}Two-way dropped-line plot{p_end}
@@ -70,19 +70,18 @@
 {phang2}{stata . twoway dropline change date in 1/60}{p_end}
 {phang2}{stata . twoway dropline change date in 1/60, yline(0, lstyle(foreground))}{p_end}
 
-{pstd}Dropped-line plot with labeled points.{p_end}
-{phang2}. sysuse lifeexp, clear{p_end}
-{phang2}. keep if region==3{p_end}
-{phang2}. generate lngnp = ln(gnppc){p_end}
-{phang2}. quietly regress lexp lngnp{p_end}
-{phang2}. predict r, resid{p_end}
+{pstd}Dropped-line plot with labeled points{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":. sysuse lifeexp, clear}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":. keep if region==3}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":. generate lngnp = ln(gnppc)}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":. quietly regress lexp lngnp}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":. predict r, resid}{p_end}
 {phang2}{space 4}{p_end}
-{phang2}. twoway dropline r gnppc, yline(0, lstyle(foreground)) {p_end}
-{phang2}{space 4}ylab(-6(1)6) mlabel(country) mlabpos(9) ///{p_end}
-{phang2}{space 4}subtitle("Regression of life expectancy on ln(gnp)", pos(11)) ///{p_end}
-{phang2}{space 4}note("Residuals in years; positive values indicate" ///{p_end}
-{phang2}{space 9}"longer than predicted life expectancy"){p_end}
-{phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__twoway_dropline_with_labels.do":click to run})}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":. twoway dropline r gnppc, yline(0, lstyle(foreground))}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":{space 4}ylab(-6(1)6) mlabel(country) mlabpos(9) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":{space 4}subtitle("Regression of life expectancy on ln(gnp)", pos(11)) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":{space 4}note("Residuals in years; positive values indicate" ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_dropline_with_labels.do":{space 4}"longer than predicted life expectancy")}{p_end}
 
 {pstd}Range plot with capped spikes{p_end}
 {phang2}{stata . sysuse sp500, clear}{p_end}
@@ -99,7 +98,24 @@
 {phang2}{stata . sysuse sp500, clear}{p_end}
 {phang2}{stata . twoway rarea high low date in 1/37}{p_end}
 
-{pstd}Scatterplot with shaded area{p_end}
+{pstd}Range plot with bars{p_end}
+{phang2}{stata . twoway rbar high low date in 1/37}{p_end}
+{phang2}{stata . twoway rbar high low date in 1/37, barwidth(.6)}{p_end}
+
+{pstd}Combined with line plot{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar1.do":. twoway rbar high low date, barwidth(.6) fcolor("255 215 104") lcolor("247 141 30") ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar1.do":{space 4}|| line close date, lcolor(#3d34a3) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar1.do":{space 4}|| in 1/37, ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar1.do":{space 4}legend(position(6) ring(0) region(lcolor(black) fcolor(#F0F0F0)))}{p_end}
+
+{pstd}Same but now the bars would be drawn over line{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar2.do":. twoway line close date, lcolor(#3d34a3) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar2.do":{space 4}|| rbar high low date, barwidth(.6) fcolor("255 215 104") lcolor("247 141 30") ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar2.do":{space 4}|| in 1/37, ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar2.do":{space 4}legend(position(6) ring(0) region(lcolor(black) fcolor(#F0F0F0)))}{p_end}
+
+{pstd}Paired-coordinate plot with spikes{p_end}
+
 
 
 {dlgtab:More information}
