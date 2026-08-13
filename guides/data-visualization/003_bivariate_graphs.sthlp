@@ -48,8 +48,9 @@
 
 {pstd}Improved version{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":. twoway ///}{p_end}
-{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}line close date, yaxis(1) || ///}{p_end}
-{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}bar change date, yaxis(2) || in 1/60, ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}line close date, yaxis(1) lcolor(#3d34a3) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}|| bar change date, yaxis(2) color("255 215 104") lcolor("247 141 30") ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}|| in 1/60, ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}ysca(axis(1) r(1000 1400)) ylab(1200(50)1400, axis(1)) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}ysca(axis(2) r(-50 300)) ylab(-50 0 50, axis(2)) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_line_and_bar.do":{space 4}ytick(-50(25)50, axis(2) grid) ///}{p_end}
