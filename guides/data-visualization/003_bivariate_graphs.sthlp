@@ -100,7 +100,7 @@
 {phang2}{stata . twoway rbar high low date in 1/37}{p_end}
 {phang2}{stata . twoway rbar high low date in 1/37, barwidth(.6)}{p_end}
 
-{pstd}Combined with line plot{p_end}
+{pstd}Combined with line plot ((click anywhere to run all commands){p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar1.do":. twoway rbar high low date, barwidth(.6) fcolor("255 215 104") lcolor("247 141 30") ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar1.do":{space 4}|| line close date, lcolor(#3d34a3) ///}{p_end}
 {phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_rbar1.do":{space 4}|| in 1/37, ///}{p_end}
