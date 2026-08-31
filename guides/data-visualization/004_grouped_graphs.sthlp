@@ -59,4 +59,9 @@
 {phang2}{stata . twoway (connected mpg weight if foreign==0) (connected mpg weight if foreign==1)}{p_end}
 
 {pstd}Grouped scatterplot with fitted lines{p_end}
-{phang2}{stata . twoway (lfit mpg weight if foreign==0) (lfit mpg weight if foreign==1)}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_scatterplot_and_line.do":. twoway ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_scatterplot_and_line.do":{space 4}(scatter mpg weight if foreign==0, mfcolor("255 215 104") mlcolor("247 141 30")) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_scatterplot_and_line.do":{space 4}(scatter mpg weight if foreign==1, mfcolor(ltblue) mlcolor(navy)) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_scatterplot_and_line.do":{space 4}(lfit mpg weight if foreign==0, lcolor("247 141 30")) ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_scatterplot_and_line.do":{space 4}(lfit mpg weight if foreign==1, lcolor(navy)), ///}{p_end}
+{phang2}{stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Data_visualization__Twoway_scatterplot_and_line.do":{space 4}legend(pos(12) ring(0) col(2))}{p_end}
