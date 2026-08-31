@@ -2,7 +2,7 @@
 {* *! Stata version 19.5 --- 2026-06-08}{...}
 
 {hilite: Bivariate graphs}{...}
-{right:{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":← Back to Data Visualization}}
+{right:{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":Back to Data Visualization}}
 
 {hline}
 {pstd}Bivariate graphs are used to explore the relationship between two variables.{p_end}
