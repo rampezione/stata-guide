@@ -2,7 +2,7 @@
 {* *! Stata version 19.5 --- 2026-04-23}{...}
 
 {hilite: Graph schemes and themes}{...}
-{right:{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":← Back to Data Visualization}}
+{right:{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/data-visualization.sthlp":Back to Data Visualization}}
 
 {hline}
 
