@@ -5,7 +5,7 @@
 
 {hline}
 
-{pstd}{error: This section is partially complete (Themes and graphs for one variable) and will be updated as the guide evolves.}{p_end}
+{pstd}{error: This section is partially complete and will be updated as the guide evolves.}{p_end}
 
 {pstd}This section focuses on data visualization in Stata. It covers how to design,{p_end}
 {pstd}customize, and export graphs for data exploration, analysis, and presentation.{p_end}
@@ -22,16 +22,16 @@
 {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/003_bivariate_graphs.sthlp":Graphs for two variables (scatter, line, bar)}{p_end}
 
 {pstd}{space 2}4. 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/004_grouped_graphs.sthlp":Grouped and multivariate graphs (by(), over())}{p_end}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/004_grouped_graphs.sthlp":Grouped and multivariate graphs (by(), over())}{error: ({it:under construction})}{p_end}
 
 {pstd}{space 2}5. 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/005_other_graphs.sthlp":Other and special‑purpose graphs (forest plots, flowcharts, etc.)}{p_end}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/005_other_graphs.sthlp":Other and special‑purpose graphs (forest plots, flowcharts, etc.)}{error: ({it:under construction})}{p_end}
 
 {pstd}{space 2}6. 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/006_graph_editor.sthlp":Using the Graph Editor}{p_end}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/006_graph_editor.sthlp":Using the Graph Editor}{error: ({it:under construction})}{p_end}
 
 {pstd}{space 2}7. 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/007_combining_and_exporting_graphs.sthlp":Combining and exporting graphs (graph save, combine, export)}{p_end}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/007_combining_and_exporting_graphs.sthlp":Combining and exporting graphs (graph save, combine, export)}{error: ({it:under construction})}{p_end}
 
 {hline}
 
