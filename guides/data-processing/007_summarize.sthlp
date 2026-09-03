@@ -44,11 +44,22 @@
 {phang2}{stata . table rep78, statistic(percent)}{p_end}
 {phang2}{stata . table rep78, stat(frequency) stat(percent)}{p_end}
 
+{pstd}{bf:Compatibility with older code}{p_end}
+{pstd}The {cmd:table} command was rewritten in Stata 17. Consequently, many{p_end}
+{pstd}examples using options such as {cmd:contents()} are no longer valid.{p_end}
+{pstd}Older syntax can usually be executed by prefixing the command with{p_end}
+{pstd}{cmd:version 16:}.{p_end}
+{phang2}{stata . table foreign rep78, contents(mean mpg)}{p_end}
+{phang2}{stata . version 16: table foreign rep78, contents(mean mpg)}{p_end}
+
 {pstd}Replace column titles using -collect- command{p_end}
 {phang2}{stata . table rep78, stat(frequency) stat(percent) miss}{p_end}
 {phang2}{stata . collect label levels result frequency "N" percent "%", modify}{p_end}
 {phang2}{stata . collect preview}{p_end}
- 
+
+{pstd}Replace column titles using -collect- command{p_end}
+{phang2}{stata . table rep78, stat(frequency) stat(percent) miss}{p_end}
+
  
 {dlgtab:two-way table}
 
