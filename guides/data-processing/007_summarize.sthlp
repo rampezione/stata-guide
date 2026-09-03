@@ -45,7 +45,7 @@
 {phang2}{stata . table rep78, stat(frequency) stat(percent)}{p_end}
 
 {pstd}Compatibility with older code}{p_end}
-{pstd}The table command was rewritten in Stata 17. Consequently, many examples using{p_end} 
+{pstd}The table command was rewritten in Stata 17. Consequently, many examples using{p_end}
 {pstd}options such as contents() are no longer valid. However, older syntax can usually{p_end}
 {pstd}be executed by prefixing the command with version 16:.{p_end}
 
@@ -53,7 +53,7 @@
 {phang2}{stata . table foreign rep78, contents(mean mpg)}{p_end}
  
 {pstd}This works:{p_end}
-{phang2}{stata . version 16: table foreign rep78, contents(mean mpg)}{p_end}
+{phang2}{stata ". version 16: table foreign rep78, contents(mean mpg)"}{p_end}
 
 {pstd}Replace column titles using -collect- command{p_end}
 {phang2}{stata . table rep78, stat(frequency) stat(percent) miss}{p_end}
