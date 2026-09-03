@@ -18,7 +18,7 @@ from loading files to exploring and preparing data for analysis.{p_end}
 
 {pstd}{space 2}4. {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/004_import_data.sthlp":Open and save the data (including import and export)}{p_end}
 
-{pstd}{space 2}5. {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/005_explore_data.sthlp":Explore data (describe, summarize, list the data)}{p_end}
+{pstd}{space 2}5. {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/005_explore_data.sthlp":Explore data (describe, count, list the data)}{p_end}
 
 {pstd}{space 2}6. {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-processing/006_data_types.sthlp":Change data types}{p_end}
 
