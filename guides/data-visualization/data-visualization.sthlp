@@ -1,7 +1,7 @@
 {smcl}
 {* *! version 1.0  2026-04-23}
 
-{hilite: Data Visualization {sf:(last updated: 23.4.2026)}}
+{hilite: Data Visualization {sf:(last updated: 24.9.2026)}}
 
 {hline}
 
