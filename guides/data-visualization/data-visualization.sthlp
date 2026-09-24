@@ -25,7 +25,7 @@
 {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/004_grouped_graphs.sthlp":Grouped and multivariate graphs (by(), over())}{error: ({it:under construction})}{p_end}
 
 {pstd}{space 2}5. 
-{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/005_other_graphs.sthlp":Other and special-purpose graphs (forest plots, flowcharts, etc.)}{error: ({it:under construction})}{p_end}
+{view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/005_other_graphs.sthlp":Other and special-purpose graphs (forest plots, flowcharts, etc.)}{p_end}
 
 {pstd}{space 2}6. 
 {view "https://github.com/rampezione/stata-guide/raw/main/guides/data-visualization/006_graph_editor.sthlp":Using the Graph Editor}{error: ({it:under construction})}{p_end}
