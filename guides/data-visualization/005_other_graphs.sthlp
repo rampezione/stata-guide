@@ -37,7 +37,7 @@
 {phang2}{space 4}xlabel(-10 "10" -7.5 "7.5" -5 "5" -2.5 "2.5" 2.5 5 7.5 10) ///{p_end}
 {phang2}{space 4}legend(label(1 Male) label(2 Female) pos(1) ring(0) row(2)) ///{p_end}
 {phang2}{space 4}title("Population pyramid") subtitle(". . . subtitle . . .") ///{p_end}
-{phang2}{space 4}note("Source: US Census Bureau, Census 2000", span)
+{phang2}{space 4}note("Source: US Census Bureau, Census 2000", span){p_end}
 {phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__Population_pyramid_1.do":click to run})}{p_end}
 
 {hline}
