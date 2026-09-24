@@ -17,7 +17,7 @@
 
 {dlgtab:Population pyramid, forest plot}
 
-{pstd}Population pyramid{p_end}
+{pstd}Population pyramid using command bar{p_end}
 
 {phang2}{hline 3} {it:example using bar command} {hline 23}{p_end}
 {phang2}{* example_start}{...}{p_end}
@@ -38,7 +38,15 @@
 {phang2}{space 4}legend(label(1 Male) label(2 Female) pos(1) ring(0) row(2)) ///{p_end}
 {phang2}{space 4}title("Population pyramid") subtitle(". . . subtitle . . .") ///{p_end}
 {phang2}{space 4}note("Source: US Census Bureau, Census 2000", span){p_end}
+{phang2}{hline 53}{p_end}
 {phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__Population_pyramid_1.do":click to run})}{p_end}
+
+
+{pstd}Population pyramid using command pyramid_chart. Note! This command displays{p_end}
+{pstd}relative distributions (%) only and does not support absolute population counts.{p_end} 
+{pstd}The dataset should contain one numeric variable (varname) and two categorical{p_end} 
+{pstd}variables specified in over() and by(). The data must also be in long format;{p_end} 
+{pstd}if stored in wide format, reshape the data before running pyramid_chart.{p_end}
 
 {hline}
 
