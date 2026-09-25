@@ -59,8 +59,8 @@
 {phang2}{stata . label variable population "Population"}{p_end}
 {phang2}{stata . label variable sex "Sex"}{p_end}
 {phang2}{stata . pyramid_chart population, over(agegrp) by(sex) dec(0)}{p_end}
-{phang2}{stata . pyramid_chart population, over(agegrp) by(sex) dec(1) title("Population Pyramid for year 2000") subtitle("in percentages") xtitle("Percentage") ytitle("Age groups"))}{p_end}
-{phang2}{stata . pyramid_chart population, over(agegrp) by(sex) dec(1) sctopt(mlabcolor(blue)) scheme(white_tableau) legend(pos(1) ring(0) row(2)))}{p_end}
+{phang2}{stata . pyramid_chart population, over(agegrp) by(sex) dec(1) title("Population Pyramid for year 2000") subtitle("in percentages") xtitle("Percentage") ytitle("Age groups")}{p_end}
+{phang2}{stata . pyramid_chart population, over(agegrp) by(sex) dec(1) sctopt(mlabcolor(blue)) scheme(white_tableau) legend(pos(1) ring(0) row(2))}{p_end}
 
 {hline}
 
