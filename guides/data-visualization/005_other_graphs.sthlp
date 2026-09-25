@@ -42,11 +42,11 @@
 {phang2}{it:({stata "do https://github.com/rampezione/stata-guide/raw/main/guides/do-files/Example__Population_pyramid_1.do":click to run})}{p_end}
 
 
-{pstd}Population pyramid using command pyramid_chart. Note! This command displays{p_end}
-{pstd}relative distributions (%) only and does not support absolute population counts.{p_end} 
-{pstd}The dataset should contain one numeric variable (varname) and two categorical{p_end} 
-{pstd}variables specified in over() and by(). The data must also be in long format;{p_end} 
-{pstd}if stored in wide format, reshape the data before running pyramid_chart.{p_end}
+{pstd}Population pyramid using command pyramid_chart. Note! This user-written command{p_end}
+{pstd}displays relative distributions (%) only and does not support absolute population{p_end} 
+{pstd}counts. The dataset should contain one numeric variable (varname) and two{p_end} 
+{pstd}categorical variables specified in over() and by(). The data must also be in long{p_end} 
+{pstd}format: if stored in wide format, reshape the data before running pyramid_chart.{p_end}
 
 {hline}
 
