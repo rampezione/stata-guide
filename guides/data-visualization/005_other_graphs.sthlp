@@ -48,7 +48,7 @@
 {pstd}categorical variables specified in over() and by(). The data must also be in long{p_end}
 {pstd}format: if stored in wide format, reshape the data before running pyramid_chart.{p_end}
 
-{phang2}{stata . ssc install pyramid_chart, replace}{space 5}{error:"// Remember the installation before using command}{p_end}
+{phang2}{stata . ssc install pyramid_chart, replace}{space 5}{error:// Remember the installation before using command}{p_end}
 {phang2}{stata . sysuse pop2000, clear{p_end}
 {phang2}{stata . keep agegrp maletotal femtotal{p_end}
 {phang2}{stata . rename maletotal population1{p_end}
