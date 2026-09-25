@@ -43,25 +43,24 @@
 
 
 {pstd}Population pyramid using command pyramid_chart. Note! This user-written command{p_end}
-{pstd}displays relative distributions (%) only and does not support absolute population{p_end} 
-{pstd}counts. The dataset should contain one numeric variable (varname) and two{p_end} 
-{pstd}categorical variables specified in over() and by(). The data must also be in long{p_end} 
+{pstd}displays relative distributions (%) only and does not support absolute population{p_end}
+{pstd}counts. The dataset should contain one numeric variable (varname) and two{p_end}
+{pstd}categorical variables specified in over() and by(). The data must also be in long{p_end}
 {pstd}format: if stored in wide format, reshape the data before running pyramid_chart.{p_end}
 
 {phang2}{stata . ssc install pyramid_chart, replace}{space 5}{error:"// Remember the installation before using command}{p_end}
-{phang2}sysuse pop2000, clear{p_end}
-{phang2}keep agegrp maletotal femtotal{p_end}
-{phang2}rename maletotal population1{p_end}
-{phang2}rename femtotal population2{p_end}
-{phang2}reshape long population, i(agegrp) j(sex){p_end}
-{phang2}label define sexlbl 1 "Male" 2 "Female"{p_end}
-{phang2}label values sex sexlbl{p_end}
-{phang2}label variable population "Population"{p_end}
-{phang2}label variable sex "Sex"{p_end}
+{phang2}{stata . sysuse pop2000, clear{p_end}
+{phang2}{stata . keep agegrp maletotal femtotal{p_end}
+{phang2}{stata . rename maletotal population1{p_end}
+{phang2}{stata . rename femtotal population2{p_end}
+{phang2}{stata . reshape long population, i(agegrp) j(sex){p_end}
+{phang2}{stata . label define sexlbl 1 "Male" 2 "Female"{p_end}
+{phang2}{stata . label values sex sexlbl{p_end}
+{phang2}{stata . label variable population "Population"{p_end}
+{phang2}{stata . label variable sex "Sex"{p_end}
 {phang2}{stata . pyramid_chart population, over(agegrp) by(sex) dec(0){p_end}
 {phang2}{stata . pyramid_chart population, over(agegrp) by(sex) dec(1) title("Population Pyramid for year 2000") subtitle("in percentages") xtitle("Percentage") ytitle("Age groups")){p_end}
 {phang2}{stata . pyramid_chart population, over(agegrp) by(sex) dec(1) sctopt(mlabcolor(blue)) scheme(white_tableau) legend(pos(1) ring(0) row(2))){p_end}
-
 
 {hline}
 
